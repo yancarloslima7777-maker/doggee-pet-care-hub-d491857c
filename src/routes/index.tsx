@@ -787,7 +787,6 @@ function Racoes({
                   <h3 className="mt-3 font-display text-2xl md:text-3xl font-extrabold leading-tight text-foreground">
                     {p.name}
                   </h3>
-                </div>
                   <button
                     type="button"
                     onClick={() => onAdd(p.id)}
