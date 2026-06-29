@@ -31,19 +31,19 @@ import heroImg from "@/assets/hero-pets.jpg";
 import logoImg from "@/assets/doggee-logo.png";
 import brandPremierGolden from "@/assets/brands/premier-golden.jpg";
 import brandRacoes from "@/assets/brands/racoes-selecionadas.jpg";
-import racaoPremier from "@/assets/racoes/premier.jpg.asset.json";
-import racaoGolden from "@/assets/racoes/golden.jpg.asset.json";
-import racaoFormulaNatural from "@/assets/racoes/formula-natural.webp.asset.json";
-import racaoMagnus from "@/assets/racoes/magnus.webp.asset.json";
-import racaoQuatree from "@/assets/racoes/quatree.webp.asset.json";
-import racaoSpecialDog from "@/assets/racoes/special-dog.webp.asset.json";
+import racaoPremier from "@/assets/racoes/premier.jpg";
+import racaoGolden from "@/assets/racoes/golden.jpg";
+import racaoFormulaNatural from "@/assets/racoes/formula-natural.webp";
+import racaoMagnus from "@/assets/racoes/magnus.webp";
+import racaoQuatree from "@/assets/racoes/quatree.webp";
+import racaoSpecialDog from "@/assets/racoes/special-dog.webp";
 const RACAO_IMAGES = {
-  premier: racaoPremier.url,
-  golden: racaoGolden.url,
-  formulaNatural: racaoFormulaNatural.url,
-  magnus: racaoMagnus.url,
-  quatree: racaoQuatree.url,
-  specialDog: racaoSpecialDog.url,
+  premier: racaoPremier,
+  golden: racaoGolden,
+  formulaNatural: racaoFormulaNatural,
+  magnus: racaoMagnus,
+  quatree: racaoQuatree,
+  specialDog: racaoSpecialDog,
 };
 import {
   Sheet,
