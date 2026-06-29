@@ -90,12 +90,12 @@ const PRODUCTS: Product[] = [
 ];
 
 const RACOES: Product[] = [
-  { id: "racao-premier", name: "Ração Premier", tag: "Super Premium", description: "", brands: [], image: RACAO_IMAGES.premier },
-  { id: "racao-golden", name: "Ração Golden", tag: "Premium Especial", description: "", brands: [], image: RACAO_IMAGES.golden },
-  { id: "racao-formula-natural", name: "Ração Fórmula Natural", tag: "Super Premium", description: "", brands: [], image: RACAO_IMAGES.formulaNatural },
-  { id: "racao-magnus", name: "Ração Magnus", tag: "Premium", description: "", brands: [], image: RACAO_IMAGES.magnus },
-  { id: "racao-quatree", name: "Ração Quatree", tag: "Premium", description: "", brands: [], image: RACAO_IMAGES.quatree },
-  { id: "racao-special-dog", name: "Ração Special Dog", tag: "Premium", description: "", brands: [], image: RACAO_IMAGES.specialDog },
+  { id: "racao-premier", name: "Ração Premier", tag: "Super Premium", description: "", brands: [], image: "" },
+  { id: "racao-golden", name: "Ração Golden", tag: "Premium Especial", description: "", brands: [], image: "" },
+  { id: "racao-formula-natural", name: "Ração Fórmula Natural", tag: "Super Premium", description: "", brands: [], image: "" },
+  { id: "racao-magnus", name: "Ração Magnus", tag: "Premium", description: "", brands: [], image: "" },
+  { id: "racao-quatree", name: "Ração Quatree", tag: "Premium", description: "", brands: [], image: "" },
+  { id: "racao-special-dog", name: "Ração Special Dog", tag: "Premium", description: "", brands: [], image: "" },
 ];
 
 const ALL_PRODUCTS = [...PRODUCTS, ...RACOES];
