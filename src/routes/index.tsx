@@ -31,19 +31,6 @@ import heroImg from "@/assets/hero-pets.jpg";
 import logoImg from "@/assets/doggee-logo.png";
 import brandPremierGolden from "@/assets/brands/premier-golden.jpg";
 import brandRacoes from "@/assets/brands/racoes-selecionadas.jpg";
-import racaoPremierAsset from "@/assets/racoes/premier.jpg.asset.json";
-import racaoGoldenAsset from "@/assets/racoes/golden.jpg.asset.json";
-import racaoFormulaNaturalAsset from "@/assets/racoes/formula-natural.webp.asset.json";
-import racaoMagnusAsset from "@/assets/racoes/magnus.webp.asset.json";
-import racaoQuatreeAsset from "@/assets/racoes/quatree.webp.asset.json";
-import racaoSpecialDogAsset from "@/assets/racoes/special-dog.webp.asset.json";
-
-const racaoPremier = racaoPremierAsset.url;
-const racaoGolden = racaoGoldenAsset.url;
-const racaoFormulaNatural = racaoFormulaNaturalAsset.url;
-const racaoMagnus = racaoMagnusAsset.url;
-const racaoQuatree = racaoQuatreeAsset.url;
-const racaoSpecialDog = racaoSpecialDogAsset.url;
 import {
   Sheet,
   SheetContent,
@@ -102,16 +89,8 @@ const PRODUCTS: Product[] = [
   },
 ];
 
-const RACOES: Product[] = [
-  { id: "racao-premier", name: "Ração Premier", tag: "Super Premium", description: "", brands: [], image: racaoPremier },
-  { id: "racao-golden", name: "Ração Golden", tag: "Premium Especial", description: "", brands: [], image: racaoGolden },
-  { id: "racao-formula-natural", name: "Ração Fórmula Natural", tag: "Super Premium", description: "", brands: [], image: racaoFormulaNatural },
-  { id: "racao-magnus", name: "Ração Magnus", tag: "Premium", description: "", brands: [], image: racaoMagnus },
-  { id: "racao-quatree", name: "Ração Quatree", tag: "Premium", description: "", brands: [], image: racaoQuatree },
-  { id: "racao-special-dog", name: "Ração Special Dog", tag: "Premium", description: "", brands: [], image: racaoSpecialDog },
-];
 
-const ALL_PRODUCTS = [...PRODUCTS, ...RACOES];
+const ALL_PRODUCTS = [...PRODUCTS];
 
 type CartItem = { product: Product; qty: number };
 
@@ -160,7 +139,6 @@ function Home() {
       <TrustBar />
       <Categories />
       <Showcase onAdd={addToCart} cart={cart} />
-      <Racoes onAdd={addToCart} cart={cart} />
       <About />
       <SocialProof />
       <Hours />
@@ -738,69 +716,6 @@ function FloatingWhats() {
   );
 }
 
-function Racoes({
-  onAdd,
-  cart,
-}: {
-  onAdd: (id: string) => void;
-  cart: Record<string, number>;
-}) {
-  return (
-    <section id="racoes" className="py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-5">
-        <div className="max-w-2xl mx-auto text-center">
-          <span className="inline-flex items-center gap-2 text-sm font-bold text-primary uppercase tracking-wider">
-            <Bone className="h-4 w-4" /> Rações
-          </span>
-          <h2 className="mt-2 text-4xl md:text-5xl font-bold">Catálogo de Rações</h2>
-          <p className="mt-4 text-muted-foreground text-lg">
-            Escolha a marca favorita do seu pet e adicione direto ao carrinho.
-          </p>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {RACOES.map((p) => {
-            const qty = cart[p.id] ?? 0;
-            return (
-              <article
-                key={p.id}
-                className="group flex flex-col rounded-3xl bg-card border border-border overflow-hidden hover:border-primary/50 hover:shadow-[var(--shadow-warm)] transition"
-              >
-                <div className="relative aspect-square bg-[var(--gradient-warm)] overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full object-contain p-5 sm:p-6 drop-shadow-xl group-hover:scale-[1.04] transition duration-500"
-                  />
-                  {qty > 0 && (
-                    <span className="absolute top-4 right-4 inline-flex items-center justify-center min-w-8 h-8 px-2.5 rounded-full bg-primary text-primary-foreground text-sm font-bold shadow-md">
-                      {qty}
-                    </span>
-                  )}
-                </div>
-                <div className="flex flex-col flex-grow p-6 text-center">
-                  <h3 className="font-display text-xl font-bold leading-tight text-foreground">
-                    {p.name}
-                  </h3>
-                  <button
-                    type="button"
-                    onClick={() => onAdd(p.id)}
-                    className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground px-5 py-3.5 text-sm font-semibold hover:bg-primary-glow transition shadow-[var(--shadow-warm)]"
-                  >
-                    <Plus className="h-4 w-4" /> Adicionar ao Carrinho
-                  </button>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 
 function Showcase({
