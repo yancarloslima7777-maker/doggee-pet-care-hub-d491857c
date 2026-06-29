@@ -32,7 +32,6 @@ import logoImg from "@/assets/doggee-logo.png";
 import brandPremierGolden from "@/assets/brands/premier-golden.jpg";
 import brandRacoes from "@/assets/brands/racoes-selecionadas.jpg";
 import {
-import {
   Sheet,
   SheetContent,
   SheetHeader,
@@ -99,7 +98,7 @@ const RACOES: Product[] = [
   { id: "racao-special-dog", name: "Ração Special Dog", tag: "Premium", description: "", brands: [], image: racaoSpecialDog },
 ];
 
-const ALL_PRODUCTS = [...PRODUCTS, ...RACOES];
+const ALL_PRODUCTS = [...PRODUCTS];
 
 type CartItem = { product: Product; qty: number };
 
@@ -148,7 +147,6 @@ function Home() {
       <TrustBar />
       <Categories />
       <Showcase onAdd={addToCart} cart={cart} />
-      <Racoes onAdd={addToCart} cart={cart} />
       <About />
       <SocialProof />
       <Hours />
