@@ -781,9 +781,13 @@ function Racoes({
                   )}
                 </div>
                 <div className="flex flex-col flex-grow p-6 text-center">
-                  <h3 className="font-display text-xl font-bold leading-tight text-foreground">
+                  <span className="mx-auto inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary uppercase tracking-wide">
+                    <Star className="h-3 w-3 fill-primary" /> {p.tag}
+                  </span>
+                  <h3 className="mt-3 font-display text-2xl md:text-3xl font-extrabold leading-tight text-foreground">
                     {p.name}
                   </h3>
+                </div>
                   <button
                     type="button"
                     onClick={() => onAdd(p.id)}
