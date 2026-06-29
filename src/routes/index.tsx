@@ -31,12 +31,19 @@ import heroImg from "@/assets/hero-pets.jpg";
 import logoImg from "@/assets/doggee-logo.png";
 import brandPremierGolden from "@/assets/brands/premier-golden.jpg";
 import brandRacoes from "@/assets/brands/racoes-selecionadas.jpg";
-import racaoPremier from "@/assets/racoes/premier.jpg";
-import racaoGolden from "@/assets/racoes/golden.jpg";
-import racaoFormulaNatural from "@/assets/racoes/formula-natural.jpg";
-import racaoMagnus from "@/assets/racoes/magnus.jpg";
-import racaoQuatree from "@/assets/racoes/quatree.jpg";
-import racaoSpecialDog from "@/assets/racoes/special-dog.jpg";
+import racaoPremierAsset from "@/assets/racoes/premier.jpg.asset.json";
+import racaoGoldenAsset from "@/assets/racoes/golden.jpg.asset.json";
+import racaoFormulaNaturalAsset from "@/assets/racoes/formula-natural.webp.asset.json";
+import racaoMagnusAsset from "@/assets/racoes/magnus.webp.asset.json";
+import racaoQuatreeAsset from "@/assets/racoes/quatree.webp.asset.json";
+import racaoSpecialDogAsset from "@/assets/racoes/special-dog.webp.asset.json";
+
+const racaoPremier = racaoPremierAsset.url;
+const racaoGolden = racaoGoldenAsset.url;
+const racaoFormulaNatural = racaoFormulaNaturalAsset.url;
+const racaoMagnus = racaoMagnusAsset.url;
+const racaoQuatree = racaoQuatreeAsset.url;
+const racaoSpecialDog = racaoSpecialDogAsset.url;
 import {
   Sheet,
   SheetContent,
