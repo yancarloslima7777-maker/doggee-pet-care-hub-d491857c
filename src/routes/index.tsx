@@ -33,10 +33,10 @@ import brandPremierGolden from "@/assets/brands/premier-golden.jpg";
 import brandRacoes from "@/assets/brands/racoes-selecionadas.jpg";
 import racaoPremier from "@/assets/racoes/premier.jpg.asset.json";
 import racaoGolden from "@/assets/racoes/golden.jpg.asset.json";
-import racaoFormulaNatural from "@/assets/racoes/formula-natural.webp.asset.json";
-import racaoMagnus from "@/assets/racoes/magnus.webp.asset.json";
-import racaoQuatree from "@/assets/racoes/quatree.webp.asset.json";
-import racaoSpecialDog from "@/assets/racoes/special-dog.webp.asset.json";
+import racaoFormulaNatural from "@/assets/racoes/formula-natural.jpg.asset.json";
+import racaoMagnus from "@/assets/racoes/magnus.jpg.asset.json";
+import racaoQuatree from "@/assets/racoes/quatree.jpg.asset.json";
+import racaoSpecialDog from "@/assets/racoes/special-dog.jpg.asset.json";
 const RACAO_IMAGES = {
   premier: racaoPremier.url,
   golden: racaoGolden.url,
