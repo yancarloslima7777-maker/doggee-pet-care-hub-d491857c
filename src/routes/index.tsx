@@ -31,6 +31,12 @@ import heroImg from "@/assets/hero-pets.jpg";
 import logoImg from "@/assets/doggee-logo.png";
 import brandPremierGolden from "@/assets/brands/premier-golden.jpg";
 import brandRacoes from "@/assets/brands/racoes-selecionadas.jpg";
+import racaoPremier from "@/assets/racoes/premier.jpg";
+import racaoGolden from "@/assets/racoes/golden.jpg";
+import racaoFormulaNatural from "@/assets/racoes/formula-natural.jpg";
+import racaoMagnus from "@/assets/racoes/magnus.jpg";
+import racaoQuatree from "@/assets/racoes/quatree.jpg";
+import racaoSpecialDog from "@/assets/racoes/special-dog.jpg";
 import {
   Sheet,
   SheetContent,
@@ -90,12 +96,12 @@ const PRODUCTS: Product[] = [
 ];
 
 const RACOES: Product[] = [
-  { id: "racao-premier", name: "Ração Premier", tag: "Super Premium", description: "", brands: [], image: "" },
-  { id: "racao-golden", name: "Ração Golden", tag: "Premium Especial", description: "", brands: [], image: "" },
-  { id: "racao-formula-natural", name: "Ração Fórmula Natural", tag: "Super Premium", description: "", brands: [], image: "" },
-  { id: "racao-magnus", name: "Ração Magnus", tag: "Premium", description: "", brands: [], image: "" },
-  { id: "racao-quatree", name: "Ração Quatree", tag: "Premium", description: "", brands: [], image: "" },
-  { id: "racao-special-dog", name: "Ração Special Dog", tag: "Premium", description: "", brands: [], image: "" },
+  { id: "racao-premier", name: "Ração Premier", tag: "Super Premium", description: "", brands: [], image: racaoPremier },
+  { id: "racao-golden", name: "Ração Golden", tag: "Premium Especial", description: "", brands: [], image: racaoGolden },
+  { id: "racao-formula-natural", name: "Ração Fórmula Natural", tag: "Super Premium", description: "", brands: [], image: racaoFormulaNatural },
+  { id: "racao-magnus", name: "Ração Magnus", tag: "Premium", description: "", brands: [], image: racaoMagnus },
+  { id: "racao-quatree", name: "Ração Quatree", tag: "Premium", description: "", brands: [], image: racaoQuatree },
+  { id: "racao-special-dog", name: "Ração Special Dog", tag: "Premium", description: "", brands: [], image: racaoSpecialDog },
 ];
 
 const ALL_PRODUCTS = [...PRODUCTS, ...RACOES];
@@ -753,13 +759,15 @@ function Racoes({
                 key={p.id}
                 className="group flex flex-col rounded-3xl bg-card border border-border overflow-hidden hover:border-primary/50 hover:shadow-[var(--shadow-warm)] transition"
               >
-                <div className="relative aspect-square bg-[var(--gradient-warm)] overflow-hidden flex items-center justify-center">
-                  <div className="flex flex-col items-center justify-center gap-3 text-primary/70">
-                    <Bone className="h-20 w-20" strokeWidth={1.5} />
-                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Imagem em breve
-                    </span>
-                  </div>
+                <div className="relative aspect-square bg-[var(--gradient-warm)] overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-contain p-5 sm:p-6 drop-shadow-xl group-hover:scale-[1.04] transition duration-500"
+                  />
                   {qty > 0 && (
                     <span className="absolute top-4 right-4 inline-flex items-center justify-center min-w-8 h-8 px-2.5 rounded-full bg-primary text-primary-foreground text-sm font-bold shadow-md">
                       {qty}
