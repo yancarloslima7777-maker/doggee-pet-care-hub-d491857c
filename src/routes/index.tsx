@@ -31,21 +31,6 @@ import heroImg from "@/assets/hero-pets.jpg";
 import logoImg from "@/assets/doggee-logo.png";
 import brandPremierGolden from "@/assets/brands/premier-golden.jpg";
 import brandRacoes from "@/assets/brands/racoes-selecionadas.jpg";
-import racaoPremier from "@/assets/racoes/premier.png.asset.json";
-import racaoGolden from "@/assets/racoes/golden.png.asset.json";
-import racaoFormulaNatural from "@/assets/racoes/formula-natural.png.asset.json";
-import racaoMagnus from "@/assets/racoes/magnus.png.asset.json";
-import racaoQuatree from "@/assets/racoes/quatree.png.asset.json";
-import racaoSpecialDog from "@/assets/racoes/special-dog.png.asset.json";
-const RACAO_IMAGES = {
-  premier: racaoPremier.url,
-  golden: racaoGolden.url,
-  formulaNatural: racaoFormulaNatural.url,
-  magnus: racaoMagnus.url,
-  quatree: racaoQuatree.url,
-  specialDog: racaoSpecialDog.url,
-
-};
 import {
   Sheet,
   SheetContent,
@@ -105,12 +90,12 @@ const PRODUCTS: Product[] = [
 ];
 
 const RACOES: Product[] = [
-  { id: "racao-premier", name: "Ração Premier", tag: "Super Premium", description: "", brands: [], image: RACAO_IMAGES.premier },
-  { id: "racao-golden", name: "Ração Golden", tag: "Premium Especial", description: "", brands: [], image: RACAO_IMAGES.golden },
-  { id: "racao-formula-natural", name: "Ração Fórmula Natural", tag: "Super Premium", description: "", brands: [], image: RACAO_IMAGES.formulaNatural },
-  { id: "racao-magnus", name: "Ração Magnus", tag: "Premium", description: "", brands: [], image: RACAO_IMAGES.magnus },
-  { id: "racao-quatree", name: "Ração Quatree", tag: "Premium", description: "", brands: [], image: RACAO_IMAGES.quatree },
-  { id: "racao-special-dog", name: "Ração Special Dog", tag: "Premium", description: "", brands: [], image: RACAO_IMAGES.specialDog },
+  { id: "racao-premier", name: "Ração Premier", tag: "Super Premium", description: "", brands: [], image: "" },
+  { id: "racao-golden", name: "Ração Golden", tag: "Premium Especial", description: "", brands: [], image: "" },
+  { id: "racao-formula-natural", name: "Ração Fórmula Natural", tag: "Super Premium", description: "", brands: [], image: "" },
+  { id: "racao-magnus", name: "Ração Magnus", tag: "Premium", description: "", brands: [], image: "" },
+  { id: "racao-quatree", name: "Ração Quatree", tag: "Premium", description: "", brands: [], image: "" },
+  { id: "racao-special-dog", name: "Ração Special Dog", tag: "Premium", description: "", brands: [], image: "" },
 ];
 
 const ALL_PRODUCTS = [...PRODUCTS, ...RACOES];
@@ -754,7 +739,7 @@ function Racoes({
           <span className="inline-flex items-center gap-2 text-sm font-bold text-primary uppercase tracking-wider">
             <Bone className="h-4 w-4" /> Rações
           </span>
-          <h2 className="mt-2 text-4xl md:text-5xl font-bold">Nossas rações em destaque.</h2>
+          <h2 className="mt-2 text-4xl md:text-5xl font-bold">Catálogo de Rações</h2>
           <p className="mt-4 text-muted-foreground text-lg">
             Escolha a marca favorita do seu pet e adicione direto ao carrinho.
           </p>
@@ -768,15 +753,13 @@ function Racoes({
                 key={p.id}
                 className="group flex flex-col rounded-3xl bg-card border border-border overflow-hidden hover:border-primary/50 hover:shadow-[var(--shadow-warm)] transition"
               >
-                <div className="relative aspect-square bg-[var(--gradient-warm)] overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full object-contain p-5 sm:p-6 drop-shadow-xl group-hover:scale-[1.04] transition duration-500"
-                  />
+                <div className="relative aspect-square bg-[var(--gradient-warm)] overflow-hidden flex items-center justify-center">
+                  <div className="flex flex-col items-center justify-center gap-3 text-primary/70">
+                    <Bone className="h-20 w-20" strokeWidth={1.5} />
+                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      Imagem em breve
+                    </span>
+                  </div>
                   {qty > 0 && (
                     <span className="absolute top-4 right-4 inline-flex items-center justify-center min-w-8 h-8 px-2.5 rounded-full bg-primary text-primary-foreground text-sm font-bold shadow-md">
                       {qty}
