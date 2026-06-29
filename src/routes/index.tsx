@@ -31,19 +31,19 @@ import heroImg from "@/assets/hero-pets.jpg";
 import logoImg from "@/assets/doggee-logo.png";
 import brandPremierGolden from "@/assets/brands/premier-golden.jpg";
 import brandRacoes from "@/assets/brands/racoes-selecionadas.jpg";
-import racaoPremier from "@/assets/racoes/premier.jpg.asset.json";
-import racaoGolden from "@/assets/racoes/golden.jpg.asset.json";
-import racaoFormulaNatural from "@/assets/racoes/formula-natural.jpg.asset.json";
-import racaoMagnus from "@/assets/racoes/magnus.jpg.asset.json";
-import racaoQuatree from "@/assets/racoes/quatree.jpg.asset.json";
-import racaoSpecialDog from "@/assets/racoes/special-dog.jpg.asset.json";
+import racaoPremier from "@/assets/racoes/premier.png";
+import racaoGolden from "@/assets/racoes/golden.png";
+import racaoFormulaNatural from "@/assets/racoes/formula-natural.png";
+import racaoMagnus from "@/assets/racoes/magnus.png";
+import racaoQuatree from "@/assets/racoes/quatree.png";
+import racaoSpecialDog from "@/assets/racoes/special-dog.png";
 const RACAO_IMAGES = {
-  premier: racaoPremier.url,
-  golden: racaoGolden.url,
-  formulaNatural: racaoFormulaNatural.url,
-  magnus: racaoMagnus.url,
-  quatree: racaoQuatree.url,
-  specialDog: racaoSpecialDog.url,
+  premier: racaoPremier,
+  golden: racaoGolden,
+  formulaNatural: racaoFormulaNatural,
+  magnus: racaoMagnus,
+  quatree: racaoQuatree,
+  specialDog: racaoSpecialDog,
 };
 import {
   Sheet,
@@ -767,12 +767,14 @@ function Racoes({
                 key={p.id}
                 className="group flex flex-col rounded-3xl bg-card border border-border overflow-hidden hover:border-primary/50 hover:shadow-[var(--shadow-warm)] transition"
               >
-                <div className="relative aspect-square bg-secondary/40 overflow-hidden">
+                <div className="relative aspect-square bg-[var(--gradient-warm)] overflow-hidden">
                   <img
                     src={p.image}
                     alt={p.name}
+                    width={1024}
+                    height={1024}
                     loading="lazy"
-                    className="absolute inset-0 w-full h-full object-contain p-6 group-hover:scale-[1.04] transition duration-500"
+                    className="absolute inset-0 w-full h-full object-contain p-5 sm:p-6 drop-shadow-xl group-hover:scale-[1.04] transition duration-500"
                   />
                   {qty > 0 && (
                     <span className="absolute top-4 right-4 inline-flex items-center justify-center min-w-8 h-8 px-2.5 rounded-full bg-primary text-primary-foreground text-sm font-bold shadow-md">
