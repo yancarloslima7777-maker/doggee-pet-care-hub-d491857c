@@ -31,6 +31,12 @@ import heroImg from "@/assets/hero-pets.jpg";
 import logoImg from "@/assets/doggee-logo.png";
 import brandPremierGolden from "@/assets/brands/premier-golden.jpg";
 import brandRacoes from "@/assets/brands/racoes-selecionadas.jpg";
+import racaoPremier from "@/assets/racoes/premier.jpg";
+import racaoGolden from "@/assets/racoes/golden.jpg";
+import racaoFormulaNatural from "@/assets/racoes/formula-natural.jpg";
+import racaoMagnus from "@/assets/racoes/magnus.jpg";
+import racaoQuatree from "@/assets/racoes/quatree.jpg";
+import racaoSpecialDog from "@/assets/racoes/special-dog.jpg";
 import {
   Sheet,
   SheetContent,
